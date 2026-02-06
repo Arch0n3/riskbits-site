@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The SMB Security Audit Checklist (What Actually Matters) — RiskiBits</title>
+  <meta name="description" content="A practical security audit checklist for small and medium businesses. Focus on what actually prevents breaches, not checkbox compliance.">
+  <meta name="keywords" content="security audit checklist, SMB security audit, small business cybersecurity, network security audit, IT security assessment">
+  <link rel="canonical" href="https://riskibits.net/blog/smb-security-audit-checklist/">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="The SMB Security Audit Checklist (What Actually Matters)">
+  <meta property="og:description" content="A practical security audit checklist for small and medium businesses. Focus on what actually prevents breaches.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://riskibits.net/blog/smb-security-audit-checklist/">
+  <meta property="article:published_time" content="2026-02-06">
+  
+  <link rel="stylesheet" href="/static/css/style.css">
+  
+  <!-- Schema.org Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The SMB Security Audit Checklist (What Actually Matters)",
+    "datePublished": "2026-02-06",
+    "author": {
+      "@type": "Person",
+      "name": "RiskiBits"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "RiskiBits"
+    }
+  }
+  </script>
+</head>
+<body>
+
+<header>
+  <div class="container-wide">
+    <a href="/" class="logo">🔒 Riski<span>Bits</span></a>
+    <nav>
+      <a href="/blog/">Articles</a>
+      <a href="/templates/">Templates</a>
+      <a href="/about/">About</a>
+    </nav>
+  </div>
+</header>
+
+<div class="article-header">
+  <div class="container">
+    <h1>The SMB Security Audit Checklist (What Actually Matters)</h1>
+    <div class="meta">February 6, 2026 · 8 min read · <span class="tag">Security Audit</span><span class="tag">SMB</span></div>
+  </div>
+</div>
+
+<article class="article-content">
+  <div class="container">
+    
+    <p>I've done security audits for SMBs for over a decade. Most "audit checklists" out there are either enterprise-focused overkill or generic compliance fluff that misses the stuff that actually gets you breached.</p>
+    
+    <p>This is the checklist I actually use. It focuses on the 20% of controls that prevent 80% of breaches.</p>
+
+    <h2>The 80/20 of SMB Security</h2>
+    
+    <p>Let's be honest: most SMBs don't have the budget or staff for a 200-point security assessment. You need to focus on what matters. Here's the reality:</p>
+    
+    <ul>
+      <li><strong>80% of breaches</strong> come from phishing, unpatched systems, or weak/stolen credentials</li>
+      <li><strong>90% of ransomware</strong> enters through email or exposed RDP</li>
+      <li><strong>Most attackers</strong> are opportunistic — they go for easy targets, not hard ones</li>
+    </ul>
+    
+    <p>So your audit should focus on closing those easy attack paths first.</p>
+
+    <h2>1. Network Perimeter</h2>
+    
+    <p>This is where most breaches start. Your internet-facing attack surface needs to be locked down.</p>
+    
+    <h3>Firewall Configuration</h3>
+    <ul>
+      <li>Review all inbound rules — can you justify every open port?</li>
+      <li>Look for "any/any" rules (red flag)</li>
+      <li>Check for rules older than 2 years that might be stale</li>
+      <li>Verify default deny is in place for inbound traffic</li>
+      <li>Review outbound rules — most companies don't filter egress (they should)</li>
+    </ul>
+    
+    <h3>Remote Access</h3>
+    <ul>
+      <li><strong>RDP exposed to internet?</strong> Fix this immediately. This is ransomware bait.</li>
+      <li>VPN configuration — is MFA required?</li>
+      <li>Split tunneling — is it enabled? Should it be?</li>
+      <li>Check for shadow IT remote access tools (TeamViewer, AnyDesk on user machines)</li>
+    </ul>
+    
+    <h3>DNS & Web Filtering</h3>
+    <ul>
+      <li>DNS filtering in place? (Cloudflare Gateway, Cisco Umbrella, etc.)</li>
+      <li>Known malware domains blocked?</li>
+      <li>DNS query logging enabled?</li>
+    </ul>
+
+    <h2>2. Identity & Access Management</h2>
+    
+    <p>Compromised credentials are involved in most breaches. This section is critical.</p>
+    
+    <h3>Admin Accounts</h3>
+    <ul>
+      <li>List all Domain Admin accounts — who has them and why?</li>
+      <li>Are admins using separate admin accounts (not their daily driver)?</li>
+      <li>When was the last admin password rotation?</li>
+      <li>Are there service accounts with Domain Admin? (common finding)</li>
+    </ul>
+    
+    <h3>MFA Coverage</h3>
+    <ul>
+      <li>Email — MFA enabled?</li>
+      <li>VPN — MFA required?</li>
+      <li>Cloud admin portals (M365, Azure, AWS) — MFA enforced?</li>
+      <li>RDP (if used internally) — MFA or network restrictions?</li>
+    </ul>
+    
+    <h3>Offboarding</h3>
+    <ul>
+      <li>Get a list of terminated employees from HR</li>
+      <li>Cross-reference with Active Directory — any accounts still enabled?</li>
+      <li>Check cloud services separately (they're often missed)</li>
+    </ul>
+
+    <h2>3. Endpoint Security</h2>
+    
+    <h3>Antivirus/EDR</h3>
+    <ul>
+      <li>AV/EDR installed on 100% of endpoints? Or are there gaps?</li>
+      <li>Definitions current?</li>
+      <li>Exclusions reviewed? (attackers love hiding in excluded folders)</li>
+    </ul>
+    
+    <h3>Patching</h3>
+    <ul>
+      <li>OS patch compliance — what percentage are current?</li>
+      <li>Third-party apps (Adobe, Java, browsers) — often forgotten</li>
+      <li>Critical CVEs from the last 90 days — are they patched?</li>
+    </ul>
+    
+    <h3>Local Admin Rights</h3>
+    <ul>
+      <li>Who has local admin on their workstation?</li>
+      <li>Do they actually need it?</li>
+      <li>Is LAPS (Local Admin Password Solution) deployed?</li>
+    </ul>
+
+    <h2>4. Backup & Recovery</h2>
+    
+    <p>Backups are your last line of defense against ransomware. They need to work.</p>
+    
+    <ul>
+      <li><strong>3-2-1 rule:</strong> 3 copies, 2 different media, 1 offsite</li>
+      <li><strong>Immutable/air-gapped backup:</strong> Do you have one? Ransomware encrypts connected backups.</li>
+      <li><strong>Last restore test:</strong> When? If never, it doesn't count as a backup.</li>
+      <li><strong>RTO/RPO:</strong> Does the business know how long recovery takes?</li>
+      <li><strong>Backup account security:</strong> Separate credentials? Not domain-joined?</li>
+    </ul>
+
+    <h2>5. The Stuff People Always Miss</h2>
+    
+    <p>These are findings I see on almost every audit:</p>
+    
+    <h3>Egress Filtering</h3>
+    <p>Most companies filter what comes IN but not what goes OUT. If malware can't call home, it can't do much damage. Block unnecessary outbound ports.</p>
+    
+    <h3>Network Segmentation</h3>
+    <p>Flat networks are an attacker's dream. If someone compromises a workstation, can they reach the domain controller? The backup server? They shouldn't be able to.</p>
+    
+    <h3>Service Account Hygiene</h3>
+    <p>Service accounts with passwords like "CompanyName2019!" and Domain Admin rights. I see this constantly. Audit them.</p>
+    
+    <h3>DNS Logging</h3>
+    <p>Most companies don't log DNS queries. This is a goldmine for detecting compromise. Turn it on.</p>
+    
+    <h3>Physical Security</h3>
+    <p>Server room unlocked? USB ports enabled on public kiosks? Visitor sign-in logs? Often overlooked.</p>
+
+    <h2>Common Findings (Every. Single. Time.)</h2>
+    
+    <p>After hundreds of audits, these show up more often than not:</p>
+    
+    <ol>
+      <li>Service accounts with Domain Admin + weak passwords</li>
+      <li>No egress filtering on the firewall</li>
+      <li>Backups exist but have never been tested</li>
+      <li>Former employees with active accounts</li>
+      <li>"Temporary" firewall rules that are 5 years old</li>
+      <li>RDP exposed to the internet (still!)</li>
+      <li>No MFA on VPN</li>
+      <li>Local admin rights for everyone</li>
+    </ol>
+
+    <h2>Making It Actionable</h2>
+    
+    <p>An audit is useless if it doesn't lead to action. For each finding:</p>
+    
+    <ul>
+      <li><strong>Severity:</strong> Critical / High / Medium / Low</li>
+      <li><strong>Effort:</strong> Quick win / Project / Major initiative</li>
+      <li><strong>Owner:</strong> Who's responsible for fixing it?</li>
+      <li><strong>Deadline:</strong> When will it be done?</li>
+    </ul>
+    
+    <p>Start with Critical + Quick Win items. You'll get the most security improvement for the least effort.</p>
+
+    <div class="cta-box">
+      <h3>Want the Full Checklist?</h3>
+      <p>I've packaged my complete audit checklist into a ready-to-use Excel template with scoring, prioritization, and a professional report format.</p>
+      <a href="https://archone.gumroad.com/l/network-security-audit" class="btn">Get the Template →</a>
+    </div>
+
+    <h2>Final Thoughts</h2>
+    
+    <p>Security audits don't have to be complicated. Focus on the basics that actually prevent breaches:</p>
+    
+    <ul>
+      <li>Lock down your perimeter (especially RDP)</li>
+      <li>Enforce MFA everywhere</li>
+      <li>Patch your systems</li>
+      <li>Test your backups</li>
+      <li>Clean up admin access</li>
+    </ul>
+    
+    <p>Do these well, and you'll be more secure than 90% of SMBs out there.</p>
+    
+    <p>Questions? Find me on <a href="https://reddit.com/r/sysadmin">r/sysadmin</a> or <a href="https://linkedin.com">LinkedIn</a>.</p>
+
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p>© 2026 RiskiBits. Built by a working security engineer.</p>
+    <p style="margin-top: 8px;">
+      <a href="/blog/">Articles</a> · 
+      <a href="/templates/">Templates</a> · 
+      <a href="/about/">About</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

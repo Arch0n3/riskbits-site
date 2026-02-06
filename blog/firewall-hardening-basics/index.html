@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firewall Hardening 101: The Rules Every Admin Should Know — RiskiBits</title>
+  <meta name="description" content="Essential firewall hardening steps that work with any vendor. Cisco, Fortinet, Palo Alto, pfSense — these rules apply to all of them.">
+  <meta name="keywords" content="firewall hardening, firewall security, network security, firewall best practices, firewall configuration">
+  <link rel="canonical" href="https://riskibits.net/blog/firewall-hardening-basics/">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="container-wide">
+    <a href="/" class="logo">🔒 Riski<span>Bits</span></a>
+    <nav>
+      <a href="/blog/">Articles</a>
+      <a href="/templates/">Templates</a>
+      <a href="/about/">About</a>
+    </nav>
+  </div>
+</header>
+
+<div class="article-header">
+  <div class="container">
+    <h1>Firewall Hardening 101: The Rules Every Admin Should Know</h1>
+    <div class="meta">February 5, 2026 · 10 min read · <span class="tag">Firewall</span><span class="tag">Hardening</span></div>
+  </div>
+</div>
+
+<article class="article-content">
+  <div class="container">
+    
+    <p>Your firewall is the front door to your network. A misconfigured firewall is like a lock that's never been tested — it looks secure, but it might not actually stop anyone.</p>
+    
+    <p>I've reviewed hundreds of firewall configs over the years. These are the hardening steps that actually matter, regardless of whether you're running Cisco, Fortinet, Palo Alto, pfSense, or something else.</p>
+
+    <h2>The Fundamentals (Non-Negotiable)</h2>
+    
+    <h3>1. Default Deny</h3>
+    <p>Your firewall should block everything by default and only allow what's explicitly permitted. This sounds obvious, but I still find configs where the implicit rule is "permit any any" or there's no cleanup rule at the end.</p>
+    
+    <h3>2. Disable Unused Interfaces</h3>
+    <p>If a physical or logical interface isn't in use, disable it. Don't just leave it unconfigured — explicitly shut it down.</p>
+    
+    <h3>3. Change Default Credentials</h3>
+    <p>Yes, people still forget this. Admin/admin, admin/password, blank passwords on console access. Check and change them.</p>
+
+    <h2>Access Control Rules</h2>
+    
+    <h3>Review Every "Any" Rule</h3>
+    <p>Search your ruleset for "any" in the source, destination, or service fields. Each one is a potential security gap:</p>
+    <ul>
+      <li><strong>Source: Any</strong> — Who exactly should be able to reach this?</li>
+      <li><strong>Destination: Any</strong> — Does this really need to go everywhere?</li>
+      <li><strong>Service: Any</strong> — Can we limit this to specific ports?</li>
+    </ul>
+    
+    <h3>Remove Stale Rules</h3>
+    <p>That "temporary" rule from 2019? Still there. Set up a process to review rules quarterly and remove anything that's no longer needed. Most firewalls can show hit counts — rules with zero hits in 90 days are candidates for removal.</p>
+    
+    <h3>Order Matters</h3>
+    <p>Firewall rules are processed top-to-bottom (usually). Put your most specific deny rules before broad permit rules. A common mistake: having a "permit any any" rule above more restrictive rules, making them useless.</p>
+
+    <h2>Management Access</h2>
+    
+    <h3>Restrict Management to Specific IPs</h3>
+    <p>Management interfaces (SSH, HTTPS, console) should only be accessible from designated management networks or jump boxes. Never from the internet. Never from the general user network.</p>
+    
+    <h3>Use Strong Authentication</h3>
+    <ul>
+      <li>Complex passwords (16+ characters)</li>
+      <li>MFA if supported</li>
+      <li>RADIUS/TACACS+ for centralized auth and logging</li>
+      <li>Individual accounts, not shared admin credentials</li>
+    </ul>
+    
+    <h3>Encrypt Management Traffic</h3>
+    <p>Disable HTTP, Telnet, and other unencrypted management protocols. Use HTTPS and SSH only.</p>
+
+    <h2>Logging & Monitoring</h2>
+    
+    <h3>Log Denied Traffic</h3>
+    <p>At minimum, log all denied connections. This helps detect scanning, brute force attempts, and misconfigured applications.</p>
+    
+    <h3>Log Allowed Traffic (Selectively)</h3>
+    <p>For critical rules (internet-facing services, admin access), enable logging even for allowed traffic. You want to know who's accessing what.</p>
+    
+    <h3>Send Logs Externally</h3>
+    <p>Forward logs to a SIEM or syslog server. If someone compromises the firewall, local logs can be wiped. External logs survive.</p>
+
+    <h2>Network Segmentation</h2>
+    
+    <p>Your firewall should do more than just sit at the edge. Internal segmentation limits lateral movement:</p>
+    
+    <ul>
+      <li><strong>Servers in a DMZ</strong> — Web servers and other public-facing systems shouldn't be on the same network as internal resources</li>
+      <li><strong>Separate user and server networks</strong> — A compromised workstation shouldn't have direct access to all servers</li>
+      <li><strong>Isolate sensitive systems</strong> — Finance, HR, and backup systems deserve their own segments</li>
+    </ul>
+
+    <h2>Egress Filtering (The Forgotten Rule)</h2>
+    
+    <p>Most companies only filter inbound traffic. But controlling outbound (egress) traffic is equally important:</p>
+    
+    <ul>
+      <li>Block unnecessary outbound ports (do users really need outbound SSH?)</li>
+      <li>Force web traffic through a proxy for inspection</li>
+      <li>Block known malware domains at the firewall</li>
+      <li>Restrict servers to only the outbound connections they need</li>
+    </ul>
+    
+    <p>If malware can't call home, it can't exfiltrate data or receive commands.</p>
+
+    <h2>Regular Maintenance</h2>
+    
+    <ul>
+      <li><strong>Firmware updates:</strong> Stay current on patches, especially security fixes</li>
+      <li><strong>Config backups:</strong> Automated, regular backups stored securely</li>
+      <li><strong>Rule reviews:</strong> Quarterly at minimum</li>
+      <li><strong>Access reviews:</strong> Who has admin access? Do they still need it?</li>
+    </ul>
+
+    <div class="cta-box">
+      <h3>Need a Complete Hardening Checklist?</h3>
+      <p>I've compiled 80+ hardening steps into a vendor-agnostic guide with detailed explanations and a compliance tracking spreadsheet.</p>
+      <a href="https://archone.gumroad.com/l/firewall-hardening" class="btn">Get the Guide →</a>
+    </div>
+
+    <h2>Quick Wins</h2>
+    
+    <p>If you only do five things today:</p>
+    
+    <ol>
+      <li>Verify default deny is in place</li>
+      <li>Restrict management access to specific IPs</li>
+      <li>Search for and review all "any" rules</li>
+      <li>Enable logging for denied traffic</li>
+      <li>Block outbound traffic to known malware domains</li>
+    </ol>
+    
+    <p>These take an hour or two and significantly improve your security posture.</p>
+
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p>© 2026 RiskiBits. Built by a working security engineer.</p>
+  </div>
+</footer>
+
+</body>
+</html>

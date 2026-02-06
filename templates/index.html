@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Security Templates — RiskiBits</title>
+  <meta name="description" content="Ready-to-use security templates for SMBs: audit checklists, hardening guides, incident response plans. Built by a working security engineer.">
+  <link rel="canonical" href="https://riskibits.net/templates/">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <style>
+    .templates-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 32px;
+    }
+    .template-card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+    .template-card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border-color: var(--primary);
+    }
+    .template-card .icon {
+      font-size: 40px;
+      margin-bottom: 16px;
+    }
+    .template-card h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+    .template-card .price {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 16px 0;
+    }
+    .template-card ul {
+      font-size: 14px;
+      color: var(--text-light);
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+    .template-card li {
+      margin-bottom: 6px;
+    }
+    .template-card .btn {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: background 0.2s;
+    }
+    .template-card .btn:hover {
+      background: var(--primary-dark);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container-wide">
+    <a href="/" class="logo">🔒 Riski<span>Bits</span></a>
+    <nav>
+      <a href="/blog/">Articles</a>
+      <a href="/templates/">Templates</a>
+      <a href="/about/">About</a>
+    </nav>
+  </div>
+</header>
+
+<div class="article-header" style="padding: 40px 0;">
+  <div class="container">
+    <h1>Security Templates</h1>
+    <p style="color: var(--text-light); margin-top: 8px;">Ready-to-use templates built from real-world experience. Skip the guesswork.</p>
+  </div>
+</div>
+
+<section style="padding: 20px 0 60px;">
+  <div class="container-wide">
+    
+    <div class="templates-grid">
+      
+      <div class="template-card">
+        <div class="icon">📋</div>
+        <h3>Network Security Audit Checklist</h3>
+        <p style="color: var(--text-light); font-size: 15px;">Complete audit checklist with scoring, prioritization, and professional report format. 150+ items across 12 security domains.</p>
+        <div class="price">$29</div>
+        <ul>
+          <li>Excel template with automated scoring</li>
+          <li>Executive summary generator</li>
+          <li>Prioritized remediation roadmap</li>
+          <li>Print-ready PDF format</li>
+        </ul>
+        <a href="https://archone.gumroad.com/l/network-security-audit" class="btn">Get Template →</a>
+      </div>
+      
+      <div class="template-card">
+        <div class="icon">🔥</div>
+        <h3>Firewall Hardening Guide</h3>
+        <p style="color: var(--text-light); font-size: 15px;">Vendor-agnostic hardening guide with 80+ steps. Works with Cisco, Fortinet, Palo Alto, pfSense, and more.</p>
+        <div class="price">$29</div>
+        <ul>
+          <li>80+ hardening steps with explanations</li>
+          <li>Compliance tracking spreadsheet</li>
+          <li>Quick reference card</li>
+          <li>Works with any firewall vendor</li>
+        </ul>
+        <a href="https://archone.gumroad.com/l/firewall-hardening" class="btn">Get Template →</a>
+      </div>
+      
+      <div class="template-card">
+        <div class="icon">🚨</div>
+        <h3>Incident Response Plan</h3>
+        <p style="color: var(--text-light); font-size: 15px;">Complete IR plan template with 6 playbooks for ransomware, data breach, BEC, malware, insider threat, and DDoS.</p>
+        <div class="price">$49</div>
+        <ul>
+          <li>Fill-in-the-blanks IR plan</li>
+          <li>6 incident-specific playbooks</li>
+          <li>Contact templates & checklists</li>
+          <li>SOC 2 / ISO 27001 / NIS2 ready</li>
+        </ul>
+        <a href="https://archone.gumroad.com/l/incident-response-plan" class="btn">Get Template →</a>
+      </div>
+      
+    </div>
+
+    <div style="text-align: center; margin-top: 48px; padding: 32px; background: var(--bg-alt); border-radius: 12px;">
+      <h3 style="margin-bottom: 12px;">Why These Templates?</h3>
+      <p style="color: var(--text-light); max-width: 600px; margin: 0 auto;">
+        Built from 10+ years of hands-on security work. These aren't generic templates — they're the actual documents I use with clients, refined over hundreds of engagements. No filler, no fluff.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 RiskiBits. Built by a working security engineer.</p>
+  </div>
+</footer>
+
+</body>
+</html>

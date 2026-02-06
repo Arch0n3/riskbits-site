@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why Your SMB Needs an Incident Response Plan (And How to Build One) — RiskiBits</title>
+  <meta name="description" content="67% of SMBs don't have an incident response plan. Learn why you need one and how to build a practical IR plan for your small business.">
+  <meta name="keywords" content="incident response plan, SMB incident response, cybersecurity plan, ransomware response, data breach response">
+  <link rel="canonical" href="https://riskibits.net/blog/incident-response-plan-smb/">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="container-wide">
+    <a href="/" class="logo">🔒 Riski<span>Bits</span></a>
+    <nav>
+      <a href="/blog/">Articles</a>
+      <a href="/templates/">Templates</a>
+      <a href="/about/">About</a>
+    </nav>
+  </div>
+</header>
+
+<div class="article-header">
+  <div class="container">
+    <h1>Why Your SMB Needs an Incident Response Plan (And How to Build One)</h1>
+    <div class="meta">February 4, 2026 · 12 min read · <span class="tag">Incident Response</span><span class="tag">Planning</span></div>
+  </div>
+</div>
+
+<article class="article-content">
+  <div class="container">
+    
+    <p>It's 2 AM. Your phone buzzes. "The servers are encrypted and there's a ransom note."</p>
+    
+    <p>What do you do? Who do you call? Do you pay? Do you tell customers? Do you call the police?</p>
+    
+    <p>If you don't have an incident response plan, you'll be figuring this out in real-time while the clock is ticking. That's not a good position to be in.</p>
+
+    <h2>The Stats Are Not Great</h2>
+    
+    <ul>
+      <li><strong>67% of SMBs</strong> don't have an incident response plan</li>
+      <li>Companies with a tested IR plan <strong>recover 3x faster</strong></li>
+      <li>The average cost of a breach for SMBs is <strong>$2.98 million</strong> (and rising)</li>
+      <li>Companies without IR plans spend <strong>58% more</strong> on breach recovery</li>
+    </ul>
+    
+    <p>An IR plan isn't just a nice-to-have. It's the difference between a controlled response and chaos.</p>
+
+    <h2>What Is an Incident Response Plan?</h2>
+    
+    <p>An IR plan is a documented process for handling security incidents. It answers:</p>
+    
+    <ul>
+      <li>What counts as an incident?</li>
+      <li>Who's responsible for what?</li>
+      <li>How do we contain the damage?</li>
+      <li>Who do we notify and when?</li>
+      <li>How do we recover?</li>
+      <li>How do we prevent it from happening again?</li>
+    </ul>
+    
+    <p>It's not a 200-page document that sits in a drawer. It's a practical playbook that people can actually follow under pressure.</p>
+
+    <h2>The 7 Phases of Incident Response</h2>
+    
+    <h3>1. Preparation</h3>
+    <p>Before anything happens:</p>
+    <ul>
+      <li>Define your IR team and their roles</li>
+      <li>Collect emergency contact information</li>
+      <li>Establish a secure communication channel (not corporate email, which might be compromised)</li>
+      <li>Prepare an IR toolkit (forensic tools, evidence bags, documentation templates)</li>
+      <li>Practice with tabletop exercises</li>
+    </ul>
+    
+    <h3>2. Identification</h3>
+    <p>Something happened — now figure out what:</p>
+    <ul>
+      <li>Confirm it's actually an incident (not a false alarm)</li>
+      <li>Assess severity: Is it ransomware? Data breach? Just malware?</li>
+      <li>Document everything from the start (timestamps matter)</li>
+      <li>Activate the appropriate response level</li>
+    </ul>
+    
+    <h3>3. Containment</h3>
+    <p>Stop the bleeding without destroying evidence:</p>
+    <ul>
+      <li>Isolate affected systems from the network</li>
+      <li><strong>DO NOT power off</strong> — this destroys memory evidence</li>
+      <li>Block malicious IPs/domains at the firewall</li>
+      <li>Disable compromised accounts</li>
+      <li>Preserve logs before they rotate out</li>
+    </ul>
+    
+    <h3>4. Eradication</h3>
+    <p>Remove the threat completely:</p>
+    <ul>
+      <li>Identify the root cause (how did they get in?)</li>
+      <li>Remove malware and backdoors</li>
+      <li>Close the entry point</li>
+      <li>Reset compromised credentials</li>
+    </ul>
+    
+    <h3>5. Recovery</h3>
+    <p>Get back to normal, safely:</p>
+    <ul>
+      <li>Restore from clean backups</li>
+      <li>Patch systems before reconnecting them</li>
+      <li>Monitor closely for signs of reinfection</li>
+      <li>Verify business operations are working</li>
+    </ul>
+    
+    <h3>6. Post-Incident Review</h3>
+    <p>Learn from what happened:</p>
+    <ul>
+      <li>What worked? What didn't?</li>
+      <li>How could we have detected this sooner?</li>
+      <li>What changes do we need to make?</li>
+      <li>Update the IR plan based on lessons learned</li>
+    </ul>
+    
+    <h3>7. Communication</h3>
+    <p>Throughout all phases, communicate appropriately:</p>
+    <ul>
+      <li>Internal stakeholders (leadership, affected teams)</li>
+      <li>External parties (customers, regulators, law enforcement)</li>
+      <li>Legal counsel (especially before any public disclosure)</li>
+      <li>Cyber insurance provider</li>
+    </ul>
+
+    <h2>Building Your IR Team</h2>
+    
+    <p>You don't need a dedicated security team. Most SMBs build an IR team from existing roles:</p>
+    
+    <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+      <thead>
+        <tr style="background: #f3f4f6; text-align: left;">
+          <th style="padding: 12px; border-bottom: 2px solid #e5e7eb;">Role</th>
+          <th style="padding: 12px; border-bottom: 2px solid #e5e7eb;">Usually Filled By</th>
+          <th style="padding: 12px; border-bottom: 2px solid #e5e7eb;">Responsibility</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 12px; border-bottom: 1px solid #e5e7eb;">IR Team Lead</td>
+          <td style="padding: 12px; border-bottom: 1px solid #e5e7eb;">IT Manager / Director</td>
+          <td style="padding: 12px; border-bottom: 1px solid #e5e7eb;">Overall coordination</td>
+        </tr>
+        <tr>
+          <td style="padding: 12px; border-bottom: 1px solid #e5e7eb;">Technical Lead</td>
+          <td style="padding: 12px; border-bottom: 1px solid #e5e7eb;">Senior IT / Sysadmin</td>
+          <td style="padding: 12px; border-bottom: 1px solid #e5e7eb;">Investigation & containment</td>
+        </tr>
+        <tr>
+          <td style="padding: 12px; border-bottom: 1px solid #e5e7eb;">Executive Sponsor</td>
+          <td style="padding: 12px; border-bottom: 1px solid #e5e7eb;">CEO / COO</td>
+          <td style="padding: 12px; border-bottom: 1px solid #e5e7eb;">Business decisions, approvals</td>
+        </tr>
+        <tr>
+          <td style="padding: 12px; border-bottom: 1px solid #e5e7eb;">Legal</td>
+          <td style="padding: 12px; border-bottom: 1px solid #e5e7eb;">External counsel</td>
+          <td style="padding: 12px; border-bottom: 1px solid #e5e7eb;">Regulatory & legal guidance</td>
+        </tr>
+        <tr>
+          <td style="padding: 12px; border-bottom: 1px solid #e5e7eb;">Communications</td>
+          <td style="padding: 12px; border-bottom: 1px solid #e5e7eb;">Marketing / CEO</td>
+          <td style="padding: 12px; border-bottom: 1px solid #e5e7eb;">External messaging</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <p>Also line up external resources <em>before</em> you need them:</p>
+    <ul>
+      <li>External IR firm (on retainer if budget allows)</li>
+      <li>Cyber insurance provider (know your policy number and claims process)</li>
+      <li>Law enforcement contacts (local FBI field office)</li>
+    </ul>
+
+    <h2>Incident Playbooks</h2>
+    
+    <p>Different incidents need different responses. Build specific playbooks for:</p>
+    
+    <h3>🔴 Ransomware</h3>
+    <ul>
+      <li>Isolate immediately — it spreads fast</li>
+      <li>DO NOT pay without consulting legal and insurance first</li>
+      <li>Check for decryptors (nomoreransom.org)</li>
+      <li>Assume data was exfiltrated (common in modern ransomware)</li>
+    </ul>
+    
+    <h3>🟠 Data Breach</h3>
+    <ul>
+      <li>Identify what data was accessed</li>
+      <li>Preserve evidence of access</li>
+      <li>Assess notification requirements (GDPR: 72 hours)</li>
+      <li>Engage legal before any external communication</li>
+    </ul>
+    
+    <h3>🟡 Business Email Compromise</h3>
+    <ul>
+      <li>Disable the compromised account</li>
+      <li>Check for email forwarding rules (attackers love these)</li>
+      <li>Alert finance team about potential fraud</li>
+      <li>Contact bank immediately if money was transferred</li>
+    </ul>
+    
+    <h3>🔵 Malware</h3>
+    <ul>
+      <li>Isolate the infected system</li>
+      <li>Identify the malware type</li>
+      <li>Check for lateral movement</li>
+      <li>Clean or rebuild (rebuild is often safer)</li>
+    </ul>
+
+    <h2>Compliance Considerations</h2>
+    
+    <p>Your IR plan may need to address specific requirements:</p>
+    
+    <ul>
+      <li><strong>GDPR:</strong> 72-hour breach notification to supervisory authority</li>
+      <li><strong>NIS2:</strong> 24-hour early warning + 72-hour notification</li>
+      <li><strong>PCI DSS:</strong> Incident response procedures required for compliance</li>
+      <li><strong>HIPAA:</strong> 60-day breach notification for PHI</li>
+      <li><strong>Cyber Insurance:</strong> Most policies require prompt notification</li>
+    </ul>
+
+    <h2>Testing Your Plan</h2>
+    
+    <p>An untested plan is just a document. Test regularly:</p>
+    
+    <ul>
+      <li><strong>Tabletop exercises:</strong> Walk through scenarios with the team. "It's Tuesday morning, and accounting reports all their files are encrypted. What do we do?"</li>
+      <li><strong>Technical drills:</strong> Practice isolating systems, restoring from backups, activating communication channels</li>
+      <li><strong>Annual review:</strong> Update contacts, validate procedures, incorporate lessons learned</li>
+    </ul>
+
+    <div class="cta-box">
+      <h3>Need a Ready-Made IR Plan?</h3>
+      <p>I've packaged my complete incident response plan template with fill-in-the-blank sections, 6 incident playbooks, and all the checklists you need.</p>
+      <a href="https://archone.gumroad.com/l/incident-response-plan" class="btn">Get the Template →</a>
+    </div>
+
+    <h2>Start Simple</h2>
+    
+    <p>If you have nothing today, start with:</p>
+    
+    <ol>
+      <li><strong>Contact list:</strong> Who do you call? (IR team, executives, legal, insurance, external help)</li>
+      <li><strong>Severity levels:</strong> What's critical vs. minor?</li>
+      <li><strong>Basic procedures:</strong> Isolate, document, escalate</li>
+      <li><strong>Communication templates:</strong> What do you tell employees? Customers?</li>
+    </ol>
+    
+    <p>Even a one-page plan is infinitely better than no plan. You can build on it over time.</p>
+    
+    <p>The worst time to create an incident response plan is during an incident.</p>
+
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p>© 2026 RiskiBits. Built by a working security engineer.</p>
+  </div>
+</footer>
+
+</body>
+</html>
