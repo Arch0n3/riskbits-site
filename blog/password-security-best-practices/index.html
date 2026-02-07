@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Security in 2026: What Actually Works — RiskiBits</title>
+  <meta name="description" content="Forget everything you learned about passwords. Here's what actually matters for password security in 2026, based on current research and real-world attacks.">
+  <meta name="keywords" content="password security, password best practices, password manager, strong passwords, password policy">
+  <link rel="canonical" href="https://riskbits.net/blog/password-security-best-practices/">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="container-wide">
+    <a href="/" class="logo">🔒 Risk<span>Bits</span></a>
+    <nav>
+      <a href="/blog/">Articles</a>
+      <a href="/templates/">Templates</a>
+      <a href="/about/">About</a>
+    </nav>
+  </div>
+</header>
+
+<div class="article-header">
+  <div class="container">
+    <h1>Password Security in 2026: What Actually Works</h1>
+    <div class="meta">January 28, 2026 · 9 min read · <span class="tag">Passwords</span><span class="tag">Authentication</span></div>
+  </div>
+</div>
+
+<article class="article-content">
+  <div class="container">
+    
+    <p>Most password advice is outdated. "Change your password every 90 days!" "Use a mix of uppercase, lowercase, numbers, and symbols!" That advice made sense in 2005. In 2026, it actually makes things worse.</p>
+    
+    <p>Here's what current research and real-world breach data actually tell us about password security.</p>
+
+    <h2>The Old Rules Are Wrong</h2>
+    
+    <h3>Forced Password Rotation Is Dead</h3>
+    <p>NIST (the U.S. National Institute of Standards and Technology) updated their guidelines years ago: don't force regular password changes. Why? Because when you make people change passwords every 90 days, they create predictable patterns.</p>
+    
+    <p><code>Summer2024!</code> becomes <code>Fall2024!</code> becomes <code>Winter2025!</code></p>
+    
+    <p>Attackers know this. Password cracking tools include these patterns by default. You're not adding security — you're adding predictability.</p>
+    
+    <p><strong>The fix:</strong> Only change passwords when there's evidence of compromise. Use monitoring instead of rotation.</p>
+    
+    <h3>Complexity Requirements Backfire</h3>
+    <p>Requiring uppercase, lowercase, numbers, and symbols sounds secure. In practice, it leads to passwords like:</p>
+    <ul>
+      <li><code>Password1!</code></li>
+      <li><code>Company2026!</code></li>
+      <li><code>Welcome123$</code></li>
+    </ul>
+    
+    <p>These meet every complexity requirement and are cracked in seconds. The requirements push people toward the minimum viable password, not a secure one.</p>
+
+    <h2>What Actually Works</h2>
+    
+    <h3>1. Length Over Complexity</h3>
+    <p>A 20-character passphrase with only lowercase letters is harder to crack than an 8-character password with every character type.</p>
+    
+    <p>Math: An 8-character password with 95 possible characters has about 6.6 quadrillion combinations. A 20-character lowercase-only password has about 19 septillion combinations. The longer password wins by a factor of nearly 3 million.</p>
+    
+    <p><strong>Minimum recommendation:</strong> 14 characters. Longer is better.</p>
+    
+    <h3>2. Passphrases Are Superior</h3>
+    <p>Instead of <code>J#kL9$mN</code>, use <code>correct-horse-battery-staple</code> (the famous XKCD example). Passphrases are:</p>
+    <ul>
+      <li>Easier to remember</li>
+      <li>Easier to type</li>
+      <li>Harder to crack</li>
+      <li>Harder to shoulder-surf</li>
+    </ul>
+    
+    <p>Pick 4-6 random words. Make them genuinely random — not a phrase from a song or book.</p>
+    
+    <h3>3. Password Managers Are Non-Negotiable</h3>
+    <p>The average person has 100+ online accounts. You cannot have unique, strong passwords for each without a password manager. Period.</p>
+    
+    <p>Good options: Bitwarden (open source, free tier), 1Password, KeePass (local-only). The specific tool matters less than actually using one.</p>
+    
+    <p><strong>Critical rule:</strong> Your password manager's master password must be your strongest password — a long passphrase you've genuinely memorized.</p>
+    
+    <h3>4. Check Against Breach Databases</h3>
+    <p>When someone creates a password, check it against known breached passwords. If "Password123!" has appeared in 50 million breaches, don't let people use it.</p>
+    
+    <p>Have I Been Pwned offers a free API for this. Many password managers do this check automatically.</p>
+
+    <h2>MFA Changes Everything</h2>
+    
+    <p>Multi-factor authentication (MFA) is more important than password complexity. Even a weak password becomes dramatically harder to exploit when combined with a second factor.</p>
+    
+    <h3>MFA Tiers</h3>
+    <ul>
+      <li><strong>SMS codes:</strong> Better than nothing, but SIM swapping attacks exist. Use if it's your only option.</li>
+      <li><strong>Authenticator apps:</strong> TOTP apps like Google Authenticator or Authy. Much better than SMS. Free and works offline.</li>
+      <li><strong>Push notifications:</strong> Microsoft Authenticator, Duo. Convenient but watch for "MFA fatigue" attacks where users approve prompts just to stop the notifications.</li>
+      <li><strong>Hardware keys:</strong> YubiKey, Google Titan. The gold standard. Phishing-resistant because the key verifies the actual website domain.</li>
+    </ul>
+    
+    <p><strong>Priority:</strong> Enable MFA everywhere, especially email, banking, and anything that can reset other passwords.</p>
+
+    <h2>Attack Realities</h2>
+    
+    <p>Understanding how passwords get stolen helps you defend against actual threats:</p>
+    
+    <h3>Credential Stuffing (Most Common)</h3>
+    <p>Attackers take username/password pairs from one breach and try them on other sites. Password reuse makes this devastating.</p>
+    
+    <p><strong>Defense:</strong> Unique passwords for every site. A password manager makes this practical.</p>
+    
+    <h3>Phishing</h3>
+    <p>Tricking users into entering passwords on fake login pages. No password complexity helps here — if you type your password into a fake site, it's compromised.</p>
+    
+    <p><strong>Defense:</strong> Security awareness training. Password managers that auto-fill (they won't fill on the wrong domain). Hardware security keys (phishing-resistant).</p>
+    
+    <h3>Brute Force / Dictionary Attacks</h3>
+    <p>Trying passwords until one works. Common passwords fall in seconds. This is where length and randomness matter.</p>
+    
+    <p><strong>Defense:</strong> Long, random passwords. Account lockouts after failed attempts. Rate limiting.</p>
+    
+    <h3>Keyloggers / Malware</h3>
+    <p>If malware is on the device, it captures passwords as you type. No password policy prevents this.</p>
+    
+    <p><strong>Defense:</strong> Endpoint protection. Keep systems patched. MFA (the second factor isn't captured by keyloggers).</p>
+
+    <h2>For System Administrators</h2>
+    
+    <p>If you're setting password policies for your organization:</p>
+    
+    <ul>
+      <li><strong>Minimum length:</strong> 14 characters (NIST recommends at least 8, but longer is better)</li>
+      <li><strong>No complexity requirements:</strong> Drop the uppercase/lowercase/number/symbol rules</li>
+      <li><strong>No forced rotation:</strong> Change on evidence of compromise only</li>
+      <li><strong>Block common passwords:</strong> Check against breach databases</li>
+      <li><strong>Require MFA:</strong> For all users, not just admins</li>
+      <li><strong>Provide a password manager:</strong> Give users tools to succeed</li>
+    </ul>
+    
+    <p>Make it easy to do the right thing. Inconvenient security gets bypassed.</p>
+
+    <h2>Passkeys: The Future</h2>
+    
+    <p>Passkeys (FIDO2/WebAuthn) are replacing passwords entirely for supported services. Instead of a password, your device holds a cryptographic key. You authenticate with biometrics or a PIN, and the device handles the rest.</p>
+    
+    <p>Benefits:</p>
+    <ul>
+      <li>Phishing-resistant (the key is bound to the specific website)</li>
+      <li>Nothing to remember</li>
+      <li>Nothing to type (nothing to keylog)</li>
+      <li>Unique per site by design</li>
+    </ul>
+    
+    <p>Major platforms (Google, Apple, Microsoft) now support passkeys. Enable them where available — they're the most secure option for consumer services.</p>
+
+    <h2>Quick Actions</h2>
+    
+    <ol>
+      <li>Get a password manager and start migrating your passwords</li>
+      <li>Enable MFA on your email — it's the key to all other accounts</li>
+      <li>Check haveibeenpwned.com to see if your email appears in breaches</li>
+      <li>Replace your weakest passwords (short, reused, or dictionary words)</li>
+      <li>Set up passkeys on Google, Apple, or Microsoft accounts if you haven't</li>
+    </ol>
+    
+    <p>Perfect security isn't the goal. Being harder to attack than the next target is.</p>
+
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p>© 2026 RiskiBits. Built by a working security engineer.</p>
+  </div>
+</footer>
+
+</body>
+</html>

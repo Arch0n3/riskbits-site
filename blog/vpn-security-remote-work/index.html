@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VPN Security for Remote Workers: What Your IT Team Won't Tell You — RiskiBits</title>
+  <meta name="description" content="VPNs aren't magic security shields. Here's what VPNs actually protect against, what they don't, and how to use them correctly for remote work.">
+  <meta name="keywords" content="VPN security, remote work security, VPN best practices, corporate VPN, work from home security">
+  <link rel="canonical" href="https://riskbits.net/blog/vpn-security-remote-work/">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="container-wide">
+    <a href="/" class="logo">🔒 Risk<span>Bits</span></a>
+    <nav>
+      <a href="/blog/">Articles</a>
+      <a href="/templates/">Templates</a>
+      <a href="/about/">About</a>
+    </nav>
+  </div>
+</header>
+
+<div class="article-header">
+  <div class="container">
+    <h1>VPN Security for Remote Workers: What Your IT Team Won't Tell You</h1>
+    <div class="meta">January 20, 2026 · 11 min read · <span class="tag">VPN</span><span class="tag">Remote Work</span></div>
+  </div>
+</div>
+
+<article class="article-content">
+  <div class="container">
+    
+    <p>"Just connect to the VPN and you're secure." That's what most employees hear. It's also dangerously incomplete.</p>
+    
+    <p>VPNs are useful tools, but they're not security blankets. Understanding what they actually do — and don't do — is crucial for anyone working remotely.</p>
+
+    <h2>What VPNs Actually Do</h2>
+    
+    <p>A VPN (Virtual Private Network) creates an encrypted tunnel between your device and a VPN server. That's it. Let's break down what this means in practice.</p>
+    
+    <h3>They Encrypt Your Traffic in Transit</h3>
+    <p>Data traveling between your laptop and the VPN server is encrypted. Anyone intercepting that traffic (coffee shop WiFi sniffers, compromised hotel networks, your ISP) sees encrypted gibberish.</p>
+    
+    <h3>They Hide Your IP Address</h3>
+    <p>Websites and services see the VPN server's IP address, not yours. This provides some privacy and can bypass geographic restrictions.</p>
+    
+    <h3>They Connect You to Internal Resources</h3>
+    <p>Corporate VPNs let you access internal systems — file servers, internal apps, databases — as if you were in the office. This is the main reason companies deploy VPNs.</p>
+
+    <h2>What VPNs Don't Do</h2>
+    
+    <h3>They Don't Protect Against Malware</h3>
+    <p>If you download malware while connected to a VPN, you still have malware. The VPN encrypts the malware download just like it encrypts everything else.</p>
+    
+    <h3>They Don't Stop Phishing</h3>
+    <p>Clicking a phishing link while connected to the VPN takes you to the phishing site. You're just accessing it through an encrypted tunnel.</p>
+    
+    <h3>They Don't Protect the Endpoints</h3>
+    <p>If your laptop is compromised, the attacker is inside the VPN tunnel with you. Everything you can access, they can access.</p>
+    
+    <h3>They Don't Encrypt Everything</h3>
+    <p>Depending on configuration, split tunneling may send some traffic outside the VPN. And once traffic leaves the VPN server heading to its final destination, it's no longer protected by the VPN.</p>
+
+    <h2>The Real Risks of Remote Work</h2>
+    
+    <h3>Unsecured Networks</h3>
+    <p>Public WiFi is the obvious one. But home networks often aren't much better — default router passwords, outdated firmware, IoT devices with known vulnerabilities sharing the network.</p>
+    
+    <p><strong>VPN helps:</strong> Yes, it encrypts traffic on the local network.</p>
+    
+    <h3>Shared/Family Devices</h3>
+    <p>The family computer with kids' games and sketchy browser extensions is not a work device. Even personal devices used for work can leak credentials through browser extensions, synchronized accounts, or family members.</p>
+    
+    <p><strong>VPN helps:</strong> Not really. The compromise is on the device, not the network.</p>
+    
+    <h3>Physical Security</h3>
+    <p>Coffee shop shoulder surfing. Unlocked laptops at home. Screens visible through windows. A VPN does nothing here.</p>
+    
+    <p><strong>VPN helps:</strong> No.</p>
+    
+    <h3>Blurred Boundaries</h3>
+    <p>Personal and work activities on the same device at the same time. Accidentally uploading personal files to corporate systems, or corporate data to personal cloud storage.</p>
+    
+    <p><strong>VPN helps:</strong> No.</p>
+
+    <h2>VPN Best Practices</h2>
+    
+    <h3>Always Connect Before Doing Work</h3>
+    <p>Make VPN connection the first step, not an afterthought. Some corporate systems are accessible only through VPN anyway, which enforces this. But for systems that work either way, the habit matters.</p>
+    
+    <h3>Understand Your Split Tunnel Configuration</h3>
+    <p>Ask your IT team: "Does our VPN use split tunneling?"</p>
+    
+    <ul>
+      <li><strong>Full tunnel:</strong> All traffic goes through the VPN. More secure, but slower for personal browsing.</li>
+      <li><strong>Split tunnel:</strong> Only corporate traffic goes through VPN; other traffic goes directly to the internet. Faster, but less secure.</li>
+    </ul>
+    
+    <p>Neither is wrong, but you should know which you're using.</p>
+    
+    <h3>Don't Ignore Connection Warnings</h3>
+    <p>If your VPN client warns that it couldn't connect, or that the certificate is invalid, or that it fell back to a less secure protocol — don't just click through. Report it.</p>
+    
+    <h3>Disconnect When Done</h3>
+    <p>Staying connected to corporate VPN while doing personal browsing routes personal traffic through corporate infrastructure. Your employer can see that traffic. Some find this acceptable; others don't.</p>
+    
+    <h3>Keep the Client Updated</h3>
+    <p>VPN clients have vulnerabilities like any software. When IT pushes an update, install it promptly.</p>
+
+    <h2>Beyond VPNs: Zero Trust</h2>
+    
+    <p>Modern security thinking has moved beyond "inside the VPN = trusted." Zero Trust architecture assumes no connection is inherently trusted, whether it's from the office, the VPN, or anywhere else.</p>
+    
+    <h3>Zero Trust Principles</h3>
+    <ul>
+      <li>Verify every request as if it came from an untrusted network</li>
+      <li>Grant minimum necessary access (not "VPN = access everything")</li>
+      <li>Continuously validate trust (not "authenticated once = trusted forever")</li>
+      <li>Assume breach (limit blast radius when compromise happens)</li>
+    </ul>
+    
+    <p>Many organizations are adopting Zero Trust, which may mean less reliance on traditional VPNs and more on identity-aware proxies, continuous authentication, and device health checks.</p>
+
+    <h2>Personal VPN Services</h2>
+    
+    <p>Consumer VPNs (NordVPN, ExpressVPN, etc.) are different from corporate VPNs. They're primarily for privacy and geo-unblocking, not corporate access.</p>
+    
+    <h3>What They're Good For</h3>
+    <ul>
+      <li>Hiding traffic from your ISP</li>
+      <li>Accessing content restricted to other regions</li>
+      <li>Adding privacy on untrusted networks when you don't have a corporate VPN</li>
+    </ul>
+    
+    <h3>What They're Not</h3>
+    <ul>
+      <li>Anonymous (VPN providers can see your traffic)</li>
+      <li>Security tools (same limitations as any VPN)</li>
+      <li>A substitute for corporate VPN (they don't connect you to corporate resources)</li>
+    </ul>
+    
+    <p>If you use a personal VPN, understand that you're trusting the VPN provider with your traffic instead of your ISP. Choose accordingly.</p>
+
+    <h2>Remote Work Security Beyond VPN</h2>
+    
+    <p>VPN is one layer. Remote work security requires multiple layers:</p>
+    
+    <h3>Device Security</h3>
+    <ul>
+      <li>Full disk encryption (BitLocker, FileVault)</li>
+      <li>Endpoint protection (antivirus/EDR)</li>
+      <li>Automatic updates enabled</li>
+      <li>Screen lock after brief inactivity</li>
+      <li>Strong login password/biometrics</li>
+    </ul>
+    
+    <h3>Account Security</h3>
+    <ul>
+      <li>MFA on everything</li>
+      <li>Password manager for unique passwords</li>
+      <li>No password sharing</li>
+    </ul>
+    
+    <h3>Physical Security</h3>
+    <ul>
+      <li>Lock screen when stepping away</li>
+      <li>Privacy screen in public places</li>
+      <li>Secure storage when not in use</li>
+      <li>Find My Device enabled</li>
+    </ul>
+    
+    <h3>Network Security</h3>
+    <ul>
+      <li>VPN for untrusted networks</li>
+      <li>Home router security (change default password, update firmware)</li>
+      <li>Separate network for IoT devices if possible</li>
+    </ul>
+    
+    <h3>Data Security</h3>
+    <ul>
+      <li>Don't store sensitive data locally if you don't need to</li>
+      <li>Use corporate-approved cloud storage, not personal</li>
+      <li>Be careful with screenshots, downloads, and prints</li>
+    </ul>
+
+    <h2>Red Flags</h2>
+    
+    <p>Report these to IT immediately:</p>
+    
+    <ul>
+      <li>VPN repeatedly disconnecting or failing to connect</li>
+      <li>Certificate warnings when connecting</li>
+      <li>Unexpected MFA prompts (potential attack in progress)</li>
+      <li>Someone requesting your VPN credentials (phishing)</li>
+      <li>Unknown devices appearing in your accounts</li>
+      <li>VPN client asking to install additional software</li>
+    </ul>
+
+    <h2>Key Takeaways</h2>
+    
+    <ul>
+      <li>VPNs encrypt traffic in transit and connect you to internal resources — that's it</li>
+      <li>They don't protect against malware, phishing, or endpoint compromise</li>
+      <li>Always connect before working, understand your split tunnel config</li>
+      <li>VPN is one layer — combine with device, account, and physical security</li>
+      <li>Modern Zero Trust approaches may eventually reduce VPN dependence</li>
+    </ul>
+    
+    <p>The VPN is your tunnel, not your shield. Use it properly, but don't rely on it alone.</p>
+
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p>© 2026 RiskiBits. Built by a working security engineer.</p>
+  </div>
+</footer>
+
+</body>
+</html>

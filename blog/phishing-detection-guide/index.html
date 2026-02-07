@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Spot Phishing: A Practical Detection Guide — RiskiBits</title>
+  <meta name="description" content="Phishing attacks are getting better. Here's how to actually spot them in 2026 — the real indicators, not the outdated advice that no longer works.">
+  <meta name="keywords" content="phishing detection, spot phishing emails, phishing awareness, email security, social engineering">
+  <link rel="canonical" href="https://riskbits.net/blog/phishing-detection-guide/">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="container-wide">
+    <a href="/" class="logo">🔒 Risk<span>Bits</span></a>
+    <nav>
+      <a href="/blog/">Articles</a>
+      <a href="/templates/">Templates</a>
+      <a href="/about/">About</a>
+    </nav>
+  </div>
+</header>
+
+<div class="article-header">
+  <div class="container">
+    <h1>How to Spot Phishing: A Practical Detection Guide</h1>
+    <div class="meta">January 12, 2026 · 10 min read · <span class="tag">Phishing</span><span class="tag">Email Security</span></div>
+  </div>
+</div>
+
+<article class="article-content">
+  <div class="container">
+    
+    <p>"Look for typos and grammar mistakes." That's the phishing advice most people get. It's also becoming useless.</p>
+    
+    <p>Modern phishing emails are well-written, professionally designed, and convincing. Attackers use AI tools to fix their grammar. They clone real emails pixel-by-pixel. They do their research.</p>
+    
+    <p>Here's what actually works for spotting phishing in 2026.</p>
+
+    <h2>The Old Advice Is Failing</h2>
+    
+    <h3>"Check for Spelling and Grammar Errors"</h3>
+    <p>Modern phishing emails are often flawless. Attackers use professional copywriters, steal real email templates, or use AI to polish their writing. Perfect grammar doesn't mean it's safe.</p>
+    
+    <h3>"Nigerian Prince Emails Are Obvious"</h3>
+    <p>Yes, crude spam is obvious. But that's not where the real danger is. Targeted phishing (spear phishing) looks exactly like legitimate business email — because it's designed to.</p>
+    
+    <h3>"Hover Over Links to Check Them"</h3>
+    <p>Still useful, but attackers know you do this. They use lookalike domains that are hard to spot on quick inspection: <code>microsoft-support.com</code>, <code>paypa1.com</code>, <code>app1e.com</code>. Many people hover, glance, and click.</p>
+
+    <h2>What Actually Matters</h2>
+    
+    <h3>1. Unexpected Requests</h3>
+    <p>The most reliable indicator isn't technical — it's contextual. Ask yourself:</p>
+    <ul>
+      <li>Was I expecting this email?</li>
+      <li>Does this request make sense given my relationship with the sender?</li>
+      <li>Is this how this person/company normally communicates?</li>
+    </ul>
+    
+    <p>Your bank emails you to "verify your account immediately"? Did you do anything that would trigger verification? No? That's a red flag.</p>
+    
+    <h3>2. Urgency and Pressure</h3>
+    <p>Phishing relies on short-circuiting your critical thinking. Common pressure tactics:</p>
+    <ul>
+      <li>"Your account will be suspended in 24 hours"</li>
+      <li>"Act now or lose access"</li>
+      <li>"Immediate action required"</li>
+      <li>"Don't share this with anyone else"</li>
+    </ul>
+    
+    <p>Legitimate organizations rarely create artificial urgency. When they do need action, they usually provide multiple ways to verify.</p>
+    
+    <h3>3. The Actual Sender Address</h3>
+    <p>Not the display name — the actual email address. "Microsoft Support" can be the display name for any email address. Look at what's after the @.</p>
+    
+    <p>Examples:</p>
+    <ul>
+      <li><code>support@microsoft.com</code> ✓ Legitimate</li>
+      <li><code>microsoft@support-team.net</code> ✗ Not Microsoft</li>
+      <li><code>support@micros0ft.com</code> ✗ Lookalike domain</li>
+      <li><code>support@microsoft.com.secure-verify.net</code> ✗ Subdomain trick</li>
+    </ul>
+    
+    <p>The real domain is immediately before the slash in URLs and after the @ in emails. Everything else can be manipulated.</p>
+    
+    <h3>4. Link Destination vs. Context</h3>
+    <p>Before clicking, hover (or long-press on mobile) to see where a link goes. Then ask: does this destination match the context?</p>
+    
+    <p>An email from "your bank" that links to a random domain? Red flag. An email from "IT support" that links to a Google Form? Suspicious. A password reset link that goes to a URL shortener? Don't click it.</p>
+    
+    <h3>5. Requests for Credentials or Sensitive Data</h3>
+    <p>Legitimate organizations almost never ask for passwords via email. They also don't ask for:</p>
+    <ul>
+      <li>Full Social Security numbers</li>
+      <li>Complete credit card numbers</li>
+      <li>Two-factor authentication codes</li>
+      <li>"Verification" that requires entering your password on a new page</li>
+    </ul>
+    
+    <p>If an email asks for credentials, go directly to the service (type the URL yourself, don't click the link) and check if there's actually an issue.</p>
+
+    <h2>Types of Phishing</h2>
+    
+    <h3>Mass Phishing</h3>
+    <p>Same email sent to thousands. Relies on volume — if 0.1% click, that's enough. Usually generic: "Dear Customer," "Your account," etc.</p>
+    
+    <h3>Spear Phishing</h3>
+    <p>Targeted at specific individuals. Uses research: your name, company, role, recent activities. Much harder to detect because it looks like real business email.</p>
+    
+    <p>Example: "Hi [Your Name], following up on the Q4 budget discussion. Please review the attached spreadsheet before Friday's meeting."</p>
+    
+    <h3>Whaling</h3>
+    <p>Spear phishing targeting executives. High-value targets get high-effort attacks. May involve extensive reconnaissance and carefully crafted pretexts.</p>
+    
+    <h3>Business Email Compromise (BEC)</h3>
+    <p>Attackers compromise or impersonate a real business email account. They insert themselves into existing conversations, change payment details on invoices, or request wire transfers.</p>
+    
+    <p>These are devastating because the email comes from (or appears to come from) a trusted contact.</p>
+    
+    <h3>Smishing (SMS Phishing)</h3>
+    <p>Same concept, text messages. "Your package couldn't be delivered, click here to reschedule." Short URLs make verification harder.</p>
+    
+    <h3>Vishing (Voice Phishing)</h3>
+    <p>Phone calls. "This is Microsoft support, we've detected a virus on your computer." Caller ID can be spoofed, so the number appearing legitimate means nothing.</p>
+
+    <h2>Real-World Examples</h2>
+    
+    <h3>The Classic Password Reset</h3>
+    <blockquote>
+    Subject: Unusual sign-in activity<br>
+    We detected a sign-in attempt from a new device. If this wasn't you, click here to secure your account immediately.
+    </blockquote>
+    
+    <p><strong>Why it works:</strong> Creates fear and urgency. Uses real security notification templates.</p>
+    
+    <p><strong>Detection:</strong> Go directly to the service and check your recent activity. Don't click the email link.</p>
+    
+    <h3>The Invoice Scam</h3>
+    <blockquote>
+    Subject: Invoice #847291 Due<br>
+    Please find attached your invoice. Payment is due within 10 days. [Attachment: Invoice.pdf.exe]
+    </blockquote>
+    
+    <p><strong>Why it works:</strong> Many people process invoices without thinking. Attachment name disguises malware.</p>
+    
+    <p><strong>Detection:</strong> Do you have a business relationship with this sender? Check the file extension carefully.</p>
+    
+    <h3>The IT Support Impersonation</h3>
+    <blockquote>
+    Subject: Action Required: Email Migration<br>
+    We're upgrading to a new email system. Click here to migrate your mailbox and avoid losing your emails.
+    </blockquote>
+    
+    <p><strong>Why it works:</strong> IT changes are common. Fear of losing email is strong.</p>
+    
+    <p><strong>Detection:</strong> Did IT announce this through official channels? Verify through a separate communication.</p>
+    
+    <h3>The CEO Fraud</h3>
+    <blockquote>
+    Subject: Urgent Wire Transfer<br>
+    [From: CEO's name, spoofed or compromised email]<br>
+    I need you to process a wire transfer urgently. This is confidential — don't discuss with others until completed.
+    </blockquote>
+    
+    <p><strong>Why it works:</strong> Authority and urgency combined. Request for secrecy prevents verification.</p>
+    
+    <p><strong>Detection:</strong> Verify any unusual financial request through a different channel. Call the person directly.</p>
+
+    <h2>When in Doubt</h2>
+    
+    <h3>Verify Through a Different Channel</h3>
+    <p>Got a suspicious email from your bank? Call the number on your card (not the number in the email). Email from a colleague seems off? Call or message them directly to confirm.</p>
+    
+    <h3>Go Direct</h3>
+    <p>Never click email links for sensitive actions. Type the URL yourself or use a bookmark. If there's really an issue with your account, you'll see it when you log in normally.</p>
+    
+    <h3>Ask IT/Security</h3>
+    <p>Most organizations want you to report suspicious emails. Forward it to your security team. It's not embarrassing to ask — it's smart.</p>
+    
+    <h3>Take Your Time</h3>
+    <p>Phishing relies on rushing you. Take 30 seconds to think before clicking. The urgency is almost always artificial.</p>
+
+    <h2>Technical Indicators</h2>
+    
+    <p>For more technical readers:</p>
+    
+    <ul>
+      <li><strong>Mismatched From: headers</strong> — Display name doesn't match email domain</li>
+      <li><strong>SPF/DKIM/DMARC failures</strong> — Many email clients show warnings for these</li>
+      <li><strong>Lookalike domains</strong> — Typosquatting, homograph attacks (using similar-looking Unicode characters)</li>
+      <li><strong>Suspicious attachments</strong> — .exe, .scr, .js, .zip containing executables, Office files with macros</li>
+      <li><strong>URL shorteners</strong> — Hide the real destination. Expand before clicking (or don't click)</li>
+      <li><strong>Non-HTTPS login pages</strong> — Any legitimate login page uses HTTPS</li>
+    </ul>
+
+    <h2>What To Do If You Clicked</h2>
+    
+    <p>It happens. If you realize you've clicked a phishing link or entered credentials:</p>
+    
+    <ol>
+      <li><strong>Change the password immediately</strong> — If you entered credentials, change that password NOW. If you reuse passwords (you shouldn't), change those too.</li>
+      <li><strong>Enable/verify MFA</strong> — Add a second factor if you haven't.</li>
+      <li><strong>Report it</strong> — Tell your IT/security team. They may need to check for compromised sessions.</li>
+      <li><strong>Scan for malware</strong> — If you downloaded anything, run a full antivirus scan.</li>
+      <li><strong>Monitor accounts</strong> — Watch for suspicious activity in the following weeks.</li>
+    </ol>
+    
+    <p>Speed matters. The faster you respond, the less damage an attacker can do.</p>
+
+    <h2>Summary</h2>
+    
+    <p>Modern phishing detection comes down to:</p>
+    
+    <ul>
+      <li><strong>Context over content</strong> — Does this request make sense?</li>
+      <li><strong>Verify separately</strong> — Never trust, always verify through another channel</li>
+      <li><strong>Go direct</strong> — Type URLs yourself for anything sensitive</li>
+      <li><strong>Resist pressure</strong> — Real emergencies allow time to verify</li>
+      <li><strong>Check the real address</strong> — Display names mean nothing</li>
+    </ul>
+    
+    <p>You'll never catch 100% of phishing. The goal is to make yourself a hard target and respond quickly when something slips through.</p>
+
+  </div>
+</article>
+
+<footer>
+  <div class="container">
+    <p>© 2026 RiskiBits. Built by a working security engineer.</p>
+  </div>
+</footer>
+
+</body>
+</html>
