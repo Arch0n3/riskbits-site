@@ -17,6 +17,7 @@
     <nav>
       <a href="/blog/">Articles</a>
       <a href="/templates/">Templates</a>
+      <a href="/resources/">Resources</a>
       <a href="/about/">About</a>
     </nav>
   </div>
@@ -36,9 +37,29 @@
     
     <p>VPNs are useful tools, but they're not security blankets. Understanding what they actually do — and don't do — is crucial for anyone working remotely.</p>
 
+    <div class="stat-box">
+      <div class="stat-item">
+        <span class="number">72%</span>
+        <span class="label">of organizations saw increased cyber risk from remote work</span>
+      </div>
+      <div class="stat-item">
+        <span class="number">60%</span>
+        <span class="label">of remote workers use personal devices for work</span>
+      </div>
+      <div class="stat-item">
+        <span class="number">20%</span>
+        <span class="label">of breaches involved remote work as a factor</span>
+      </div>
+    </div>
+
     <h2>What VPNs Actually Do</h2>
     
     <p>A VPN (Virtual Private Network) creates an encrypted tunnel between your device and a VPN server. That's it. Let's break down what this means in practice.</p>
+    
+    <figure>
+      <img src="/static/images/blog/vpn-diagram.svg" alt="Diagram showing how VPN traffic flows through an encrypted tunnel">
+      <figcaption>VPN creates an encrypted tunnel between your device and the VPN server — traffic beyond that point is not protected by the VPN</figcaption>
+    </figure>
     
     <h3>They Encrypt Your Traffic in Transit</h3>
     <p>Data traveling between your laptop and the VPN server is encrypted. Anyone intercepting that traffic (coffee shop WiFi sniffers, compromised hotel networks, your ISP) sees encrypted gibberish.</p>
@@ -50,6 +71,11 @@
     <p>Corporate VPNs let you access internal systems — file servers, internal apps, databases — as if you were in the office. This is the main reason companies deploy VPNs.</p>
 
     <h2>What VPNs Don't Do</h2>
+    
+    <div class="quote-box">
+      <p>"VPN is not a silver bullet. It protects data in transit, but doesn't protect endpoints, doesn't prevent phishing, and doesn't stop malware. Organizations need defense in depth."</p>
+      <span class="source">— SANS Institute, <a href="https://www.sans.org/white-papers/" target="_blank">Remote Work Security Guidelines</a></span>
+    </div>
     
     <h3>They Don't Protect Against Malware</h3>
     <p>If you download malware while connected to a VPN, you still have malware. The VPN encrypts the malware download just like it encrypts everything else.</p>
@@ -98,6 +124,11 @@
       <li><strong>Split tunnel:</strong> Only corporate traffic goes through VPN; other traffic goes directly to the internet. Faster, but less secure.</li>
     </ul>
     
+    <div class="quote-box">
+      <p>"Split tunneling can reduce VPN bandwidth requirements but may expose users to threats that would otherwise be blocked by corporate security controls."</p>
+      <span class="source">— CIS (Center for Internet Security), <a href="https://www.cisecurity.org/insights/white-papers" target="_blank">Remote Work Security</a></span>
+    </div>
+    
     <p>Neither is wrong, but you should know which you're using.</p>
     
     <h3>Don't Ignore Connection Warnings</h3>
@@ -112,6 +143,11 @@
     <h2>Beyond VPNs: Zero Trust</h2>
     
     <p>Modern security thinking has moved beyond "inside the VPN = trusted." Zero Trust architecture assumes no connection is inherently trusted, whether it's from the office, the VPN, or anywhere else.</p>
+    
+    <div class="quote-box">
+      <p>"Never trust, always verify. Treat every access request as if it originates from an untrusted network, regardless of where it comes from or what resource it accesses."</p>
+      <span class="source">— NIST Special Publication 800-207, <a href="https://csrc.nist.gov/publications/detail/sp/800-207/final" target="_blank">Zero Trust Architecture</a></span>
+    </div>
     
     <h3>Zero Trust Principles</h3>
     <ul>
@@ -162,6 +198,11 @@
       <li>Password manager for unique passwords</li>
       <li>No password sharing</li>
     </ul>
+    
+    <div class="quote-box">
+      <p>"Defense in depth is essential. No single security control is sufficient. Organizations should implement multiple layers of security controls."</p>
+      <span class="source">— CISA, <a href="https://www.cisa.gov/topics/cybersecurity-best-practices" target="_blank">Cybersecurity Best Practices</a></span>
+    </div>
     
     <h3>Physical Security</h3>
     <ul>

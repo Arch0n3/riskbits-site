@@ -17,6 +17,7 @@
     <nav>
       <a href="/blog/">Articles</a>
       <a href="/templates/">Templates</a>
+      <a href="/resources/">Resources</a>
       <a href="/about/">About</a>
     </nav>
   </div>
@@ -38,6 +39,21 @@
     
     <p>Here's what actually works for spotting phishing in 2026.</p>
 
+    <div class="stat-box">
+      <div class="stat-item">
+        <span class="number">91%</span>
+        <span class="label">of cyberattacks start with a phishing email</span>
+      </div>
+      <div class="stat-item">
+        <span class="number">$4.9M</span>
+        <span class="label">average cost of a phishing-related breach</span>
+      </div>
+      <div class="stat-item">
+        <span class="number">3.4B</span>
+        <span class="label">phishing emails sent daily worldwide</span>
+      </div>
+    </div>
+
     <h2>The Old Advice Is Failing</h2>
     
     <h3>"Check for Spelling and Grammar Errors"</h3>
@@ -45,6 +61,11 @@
     
     <h3>"Nigerian Prince Emails Are Obvious"</h3>
     <p>Yes, crude spam is obvious. But that's not where the real danger is. Targeted phishing (spear phishing) looks exactly like legitimate business email — because it's designed to.</p>
+    
+    <div class="quote-box">
+      <p>"Spear-phishing emails are crafted to appear as though they come from a trusted source and are tailored to the specific victim. They often contain no malicious links or attachments in the initial contact."</p>
+      <span class="source">— FBI Internet Crime Complaint Center, <a href="https://www.ic3.gov/" target="_blank">Annual Report</a></span>
+    </div>
     
     <h3>"Hover Over Links to Check Them"</h3>
     <p>Still useful, but attackers know you do this. They use lookalike domains that are hard to spot on quick inspection: <code>microsoft-support.com</code>, <code>paypa1.com</code>, <code>app1e.com</code>. Many people hover, glance, and click.</p>
@@ -70,10 +91,20 @@
       <li>"Don't share this with anyone else"</li>
     </ul>
     
+    <div class="quote-box">
+      <p>"Social engineers exploit human psychology — urgency, fear, curiosity, and the desire to be helpful. The best defense is to slow down and verify through a separate channel."</p>
+      <span class="source">— SANS Security Awareness, <a href="https://www.sans.org/security-awareness-training/" target="_blank">Training Guidelines</a></span>
+    </div>
+    
     <p>Legitimate organizations rarely create artificial urgency. When they do need action, they usually provide multiple ways to verify.</p>
     
     <h3>3. The Actual Sender Address</h3>
     <p>Not the display name — the actual email address. "Microsoft Support" can be the display name for any email address. Look at what's after the @.</p>
+    
+    <figure>
+      <img src="/static/images/blog/email-sender-anatomy.svg" alt="Anatomy of an email sender showing display name vs actual address">
+      <figcaption>Always check the actual email address, not just the display name — they can be completely different</figcaption>
+    </figure>
     
     <p>Examples:</p>
     <ul>
@@ -99,6 +130,11 @@
       <li>"Verification" that requires entering your password on a new page</li>
     </ul>
     
+    <div class="quote-box">
+      <p>"No legitimate organization will ever ask you to provide your password via email. If you receive such a request, it is a phishing attempt."</p>
+      <span class="source">— CISA, <a href="https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks" target="_blank">Phishing Guidance</a></span>
+    </div>
+    
     <p>If an email asks for credentials, go directly to the service (type the URL yourself, don't click the link) and check if there's actually an issue.</p>
 
     <h2>Types of Phishing</h2>
@@ -116,6 +152,11 @@
     
     <h3>Business Email Compromise (BEC)</h3>
     <p>Attackers compromise or impersonate a real business email account. They insert themselves into existing conversations, change payment details on invoices, or request wire transfers.</p>
+    
+    <div class="quote-box">
+      <p>"BEC schemes have caused over $50 billion in losses globally. The average loss per incident exceeds $120,000."</p>
+      <span class="source">— FBI IC3, <a href="https://www.ic3.gov/Media/PDF/AnnualReport/2023_IC3Report.pdf" target="_blank">2023 Internet Crime Report</a></span>
+    </div>
     
     <p>These are devastating because the email comes from (or appears to come from) a trusted contact.</p>
     
@@ -178,6 +219,11 @@
     
     <h3>Ask IT/Security</h3>
     <p>Most organizations want you to report suspicious emails. Forward it to your security team. It's not embarrassing to ask — it's smart.</p>
+    
+    <div class="quote-box">
+      <p>"Creating a culture where employees feel comfortable reporting suspicious emails — even if they clicked — is essential. Fear of punishment leads to hidden incidents and delayed response."</p>
+      <span class="source">— NIST Cybersecurity Framework, <a href="https://www.nist.gov/cyberframework" target="_blank">Awareness & Training</a></span>
+    </div>
     
     <h3>Take Your Time</h3>
     <p>Phishing relies on rushing you. Take 30 seconds to think before clicking. The urgency is almost always artificial.</p>

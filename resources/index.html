@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Security Resources — RiskiBits</title>
+  <meta name="description" content="Curated cybersecurity resources from NIST, CIS, CISA, SANS, and other authoritative sources. Frameworks, guidelines, and tools for IT security professionals.">
+  <meta name="keywords" content="cybersecurity resources, NIST guidelines, CIS benchmarks, security frameworks, CISA resources">
+  <link rel="canonical" href="https://riskbits.net/resources/">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <style>
+    .resource-section { margin-bottom: 48px; }
+    .resource-section h2 { 
+      font-size: 24px; 
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border);
+    }
+    .resource-card {
+      display: flex;
+      gap: 20px;
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 16px;
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+    .resource-card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border-color: var(--primary);
+    }
+    .resource-icon {
+      font-size: 32px;
+      flex-shrink: 0;
+    }
+    .resource-content h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+    .resource-content h3 a { color: var(--text); }
+    .resource-content h3 a:hover { color: var(--primary); text-decoration: none; }
+    .resource-content p {
+      color: var(--text-light);
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+    .resource-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+    .resource-tag {
+      font-size: 11px;
+      padding: 4px 10px;
+      background: var(--bg-alt);
+      border-radius: 50px;
+      color: var(--text-light);
+    }
+    .resource-tag.free { background: #d1fae5; color: #065f46; }
+    .intro-text {
+      font-size: 18px;
+      color: var(--text-light);
+      margin-bottom: 40px;
+      line-height: 1.7;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container-wide">
+    <a href="/" class="logo">🔒 Risk<span>Bits</span></a>
+    <nav>
+      <a href="/blog/">Articles</a>
+      <a href="/templates/">Templates</a>
+      <a href="/resources/">Resources</a>
+      <a href="/about/">About</a>
+    </nav>
+  </div>
+</header>
+
+<div class="article-header" style="padding: 40px 0;">
+  <div class="container">
+    <h1>Security Resources</h1>
+    <p style="color: var(--text-light); margin-top: 8px;">Curated links to authoritative security frameworks, guidelines, and tools</p>
+  </div>
+</div>
+
+<section class="articles" style="padding-top: 20px;">
+  <div class="container">
+    
+    <p class="intro-text">These are the resources I actually use and recommend. Official frameworks, government guidelines, and trusted industry standards — no affiliate links, no sponsors, just useful stuff.</p>
+
+    <div class="resource-section">
+      <h2>🏛️ Frameworks & Standards</h2>
+      
+      <div class="resource-card">
+        <div class="resource-icon">📘</div>
+        <div class="resource-content">
+          <h3><a href="https://www.nist.gov/cyberframework" target="_blank">NIST Cybersecurity Framework (CSF)</a></h3>
+          <p>The gold standard for organizing security programs. Covers Identify, Protect, Detect, Respond, and Recover. Works for any organization size.</p>
+          <div class="resource-tags">
+            <span class="resource-tag free">Free</span>
+            <span class="resource-tag">Framework</span>
+            <span class="resource-tag">Enterprise</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="resource-card">
+        <div class="resource-icon">📗</div>
+        <div class="resource-content">
+          <h3><a href="https://pages.nist.gov/800-63-3/" target="_blank">NIST SP 800-63B — Digital Identity Guidelines</a></h3>
+          <p>The definitive source on password policy. If your organization still requires 90-day password changes, show them this document.</p>
+          <div class="resource-tags">
+            <span class="resource-tag free">Free</span>
+            <span class="resource-tag">Passwords</span>
+            <span class="resource-tag">Authentication</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="resource-card">
+        <div class="resource-icon">🛡️</div>
+        <div class="resource-content">
+          <h3><a href="https://www.cisecurity.org/controls" target="_blank">CIS Critical Security Controls</a></h3>
+          <p>18 prioritized security controls. Implementation Groups (IGs) help you focus on what matters for your organization's size and risk level.</p>
+          <div class="resource-tags">
+            <span class="resource-tag free">Free</span>
+            <span class="resource-tag">Controls</span>
+            <span class="resource-tag">Prioritized</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="resource-card">
+        <div class="resource-icon">🔧</div>
+        <div class="resource-content">
+          <h3><a href="https://www.cisecurity.org/cis-benchmarks" target="_blank">CIS Benchmarks</a></h3>
+          <p>Detailed hardening guides for operating systems, cloud platforms, network devices, and applications. Specific, actionable, and widely respected.</p>
+          <div class="resource-tags">
+            <span class="resource-tag free">Free (registration)</span>
+            <span class="resource-tag">Hardening</span>
+            <span class="resource-tag">Configuration</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="resource-card">
+        <div class="resource-icon">🎯</div>
+        <div class="resource-content">
+          <h3><a href="https://csrc.nist.gov/publications/detail/sp/800-207/final" target="_blank">NIST SP 800-207 — Zero Trust Architecture</a></h3>
+          <p>The authoritative guide to Zero Trust. Essential reading as organizations move beyond perimeter-based security.</p>
+          <div class="resource-tags">
+            <span class="resource-tag free">Free</span>
+            <span class="resource-tag">Zero Trust</span>
+            <span class="resource-tag">Architecture</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="resource-section">
+      <h2>🏢 Government Resources</h2>
+      
+      <div class="resource-card">
+        <div class="resource-icon">🇺🇸</div>
+        <div class="resource-content">
+          <h3><a href="https://www.cisa.gov/topics/cybersecurity-best-practices" target="_blank">CISA Cybersecurity Best Practices</a></h3>
+          <p>Practical guidance from the U.S. Cybersecurity and Infrastructure Security Agency. Great starting point for SMBs.</p>
+          <div class="resource-tags">
+            <span class="resource-tag free">Free</span>
+            <span class="resource-tag">Best Practices</span>
+            <span class="resource-tag">SMB-friendly</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="resource-card">
+        <div class="resource-icon">⚠️</div>
+        <div class="resource-content">
+          <h3><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank">CISA Known Exploited Vulnerabilities (KEV)</a></h3>
+          <p>The vulnerabilities actually being exploited in the wild. If you can only patch some things, patch these first.</p>
+          <div class="resource-tags">
+            <span class="resource-tag free">Free</span>
+            <span class="resource-tag">Vulnerabilities</span>
+            <span class="resource-tag">Patching Priority</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="resource-card">
+        <div class="resource-icon">📊</div>
+        <div class="resource-content">
+          <h3><a href="https://www.ic3.gov/" target="_blank">FBI Internet Crime Complaint Center (IC3)</a></h3>
+          <p>Annual reports with real data on cybercrime trends, losses by attack type, and emerging threats. Eye-opening statistics for awareness training.</p>
+          <div class="resource-tags">
+            <span class="resource-tag free">Free</span>
+            <span class="resource-tag">Reports</span>
+            <span class="resource-tag">Statistics</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="resource-card">
+        <div class="resource-icon">🇪🇺</div>
+        <div class="resource-content">
+          <h3><a href="https://www.enisa.europa.eu/" target="_blank">ENISA (EU Agency for Cybersecurity)</a></h3>
+          <p>European perspective on cybersecurity. Threat landscapes, good practices, and sector-specific guidance.</p>
+          <div class="resource-tags">
+            <span class="resource-tag free">Free</span>
+            <span class="resource-tag">EU</span>
+            <span class="resource-tag">Reports</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="resource-section">
+      <h2>🔍 Tools & References</h2>
+      
+      <div class="resource-card">
+        <div class="resource-icon">🔐</div>
+        <div class="resource-content">
+          <h3><a href="https://haveibeenpwned.com/" target="_blank">Have I Been Pwned</a></h3>
+          <p>Check if your email or password has appeared in data breaches. Also offers an API for checking passwords during registration.</p>
+          <div class="resource-tags">
+            <span class="resource-tag free">Free</span>
+            <span class="resource-tag">Breach Check</span>
+            <span class="resource-tag">API Available</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="resource-card">
+        <div class="resource-icon">🔑</div>
+        <div class="resource-content">
+          <h3><a href="https://fidoalliance.org/passkeys/" target="_blank">FIDO Alliance — Passkeys</a></h3>
+          <p>Everything about passkeys — the passwordless future. Implementation guides, user experience research, and adoption resources.</p>
+          <div class="resource-tags">
+            <span class="resource-tag free">Free</span>
+            <span class="resource-tag">Passkeys</span>
+            <span class="resource-tag">FIDO2</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="resource-card">
+        <div class="resource-icon">📝</div>
+        <div class="resource-content">
+          <h3><a href="https://attack.mitre.org/" target="_blank">MITRE ATT&CK</a></h3>
+          <p>Knowledge base of adversary tactics and techniques. Essential for threat modeling, detection engineering, and red team exercises.</p>
+          <div class="resource-tags">
+            <span class="resource-tag free">Free</span>
+            <span class="resource-tag">Threat Intel</span>
+            <span class="resource-tag">Detection</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="resource-card">
+        <div class="resource-icon">📚</div>
+        <div class="resource-content">
+          <h3><a href="https://owasp.org/" target="_blank">OWASP (Open Web Application Security Project)</a></h3>
+          <p>Web and application security resources. The OWASP Top 10 is essential knowledge for anyone building or securing web apps.</p>
+          <div class="resource-tags">
+            <span class="resource-tag free">Free</span>
+            <span class="resource-tag">Web Security</span>
+            <span class="resource-tag">AppSec</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="resource-section">
+      <h2>📖 Learning & Training</h2>
+      
+      <div class="resource-card">
+        <div class="resource-icon">🎓</div>
+        <div class="resource-content">
+          <h3><a href="https://www.sans.org/security-resources/" target="_blank">SANS Reading Room & Resources</a></h3>
+          <p>Thousands of free whitepapers, research, and practical guides. The paid training is excellent too, but the free resources are gold.</p>
+          <div class="resource-tags">
+            <span class="resource-tag free">Free (resources)</span>
+            <span class="resource-tag">Research</span>
+            <span class="resource-tag">Training</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="resource-card">
+        <div class="resource-icon">🛡️</div>
+        <div class="resource-content">
+          <h3><a href="https://www.cisa.gov/secure-our-world" target="_blank">CISA Secure Our World</a></h3>
+          <p>Simple, clear guidance for basic security hygiene. Perfect for sharing with non-technical users and small businesses.</p>
+          <div class="resource-tags">
+            <span class="resource-tag free">Free</span>
+            <span class="resource-tag">Awareness</span>
+            <span class="resource-tag">Basic</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="resource-card">
+        <div class="resource-icon">🎮</div>
+        <div class="resource-content">
+          <h3><a href="https://tryhackme.com/" target="_blank">TryHackMe</a></h3>
+          <p>Hands-on cybersecurity training through browser-based labs. Great for learning offensive and defensive security skills.</p>
+          <div class="resource-tags">
+            <span class="resource-tag">Freemium</span>
+            <span class="resource-tag">Hands-on</span>
+            <span class="resource-tag">Labs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="resource-section">
+      <h2>📰 Staying Current</h2>
+      
+      <div class="resource-card">
+        <div class="resource-icon">📡</div>
+        <div class="resource-content">
+          <h3><a href="https://krebsonsecurity.com/" target="_blank">Krebs on Security</a></h3>
+          <p>Brian Krebs does deep investigative journalism on cybercrime. Thorough, well-researched, and often breaks major stories.</p>
+          <div class="resource-tags">
+            <span class="resource-tag free">Free</span>
+            <span class="resource-tag">News</span>
+            <span class="resource-tag">Investigation</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="resource-card">
+        <div class="resource-icon">🔬</div>
+        <div class="resource-content">
+          <h3><a href="https://www.schneier.com/" target="_blank">Schneier on Security</a></h3>
+          <p>Bruce Schneier's blog on security, privacy, and technology policy. Thoughtful analysis from a security legend.</p>
+          <div class="resource-tags">
+            <span class="resource-tag free">Free</span>
+            <span class="resource-tag">Analysis</span>
+            <span class="resource-tag">Policy</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="resource-card">
+        <div class="resource-icon">🗞️</div>
+        <div class="resource-content">
+          <h3><a href="https://thehackernews.com/" target="_blank">The Hacker News</a></h3>
+          <p>Daily cybersecurity news. Good for staying current on vulnerabilities, breaches, and industry developments.</p>
+          <div class="resource-tags">
+            <span class="resource-tag free">Free</span>
+            <span class="resource-tag">Daily News</span>
+            <span class="resource-tag">Vulnerabilities</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 RiskiBits. Built by a working security engineer.</p>
+  </div>
+</footer>
+
+</body>
+</html>

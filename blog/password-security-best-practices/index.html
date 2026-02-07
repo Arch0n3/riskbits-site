@@ -17,6 +17,7 @@
     <nav>
       <a href="/blog/">Articles</a>
       <a href="/templates/">Templates</a>
+      <a href="/resources/">Resources</a>
       <a href="/about/">About</a>
     </nav>
   </div>
@@ -36,10 +37,30 @@
     
     <p>Here's what current research and real-world breach data actually tell us about password security.</p>
 
+    <div class="stat-box">
+      <div class="stat-item">
+        <span class="number">81%</span>
+        <span class="label">of breaches involve weak or stolen passwords</span>
+      </div>
+      <div class="stat-item">
+        <span class="number">123456</span>
+        <span class="label">still the most common password globally</span>
+      </div>
+      <div class="stat-item">
+        <span class="number">24B+</span>
+        <span class="label">credentials exposed in data breaches</span>
+      </div>
+    </div>
+
     <h2>The Old Rules Are Wrong</h2>
     
     <h3>Forced Password Rotation Is Dead</h3>
     <p>NIST (the U.S. National Institute of Standards and Technology) updated their guidelines years ago: don't force regular password changes. Why? Because when you make people change passwords every 90 days, they create predictable patterns.</p>
+    
+    <div class="quote-box">
+      <p>"Verifiers SHOULD NOT require memorized secrets to be changed arbitrarily (e.g., periodically). However, verifiers SHALL force a change if there is evidence of compromise."</p>
+      <span class="source">— NIST Special Publication 800-63B, <a href="https://pages.nist.gov/800-63-3/sp800-63b.html" target="_blank">Digital Identity Guidelines</a></span>
+    </div>
     
     <p><code>Summer2024!</code> becomes <code>Fall2024!</code> becomes <code>Winter2025!</code></p>
     
@@ -57,10 +78,20 @@
     
     <p>These meet every complexity requirement and are cracked in seconds. The requirements push people toward the minimum viable password, not a secure one.</p>
 
+    <div class="quote-box">
+      <p>"Highly complex memorized secrets introduce a new potential vulnerability: they are less likely to be memorable, and it is more likely that they will be written down or stored electronically in an unsafe manner."</p>
+      <span class="source">— NIST SP 800-63B, Section 5.1.1.2</span>
+    </div>
+
     <h2>What Actually Works</h2>
     
     <h3>1. Length Over Complexity</h3>
     <p>A 20-character passphrase with only lowercase letters is harder to crack than an 8-character password with every character type.</p>
+    
+    <figure>
+      <img src="/static/images/blog/password-entropy.svg" alt="Password entropy comparison showing length vs complexity">
+      <figcaption>Longer passwords exponentially increase the time required for brute-force attacks</figcaption>
+    </figure>
     
     <p>Math: An 8-character password with 95 possible characters has about 6.6 quadrillion combinations. A 20-character lowercase-only password has about 19 septillion combinations. The longer password wins by a factor of nearly 3 million.</p>
     
@@ -80,6 +111,11 @@
     <h3>3. Password Managers Are Non-Negotiable</h3>
     <p>The average person has 100+ online accounts. You cannot have unique, strong passwords for each without a password manager. Period.</p>
     
+    <div class="quote-box">
+      <p>"Use a password manager to generate and store unique passwords for each of your accounts. Password managers create complex passwords and remember them so you don't have to."</p>
+      <span class="source">— CISA (Cybersecurity & Infrastructure Security Agency), <a href="https://www.cisa.gov/secure-our-world/use-strong-passwords" target="_blank">Use Strong Passwords</a></span>
+    </div>
+    
     <p>Good options: Bitwarden (open source, free tier), 1Password, KeePass (local-only). The specific tool matters less than actually using one.</p>
     
     <p><strong>Critical rule:</strong> Your password manager's master password must be your strongest password — a long passphrase you've genuinely memorized.</p>
@@ -92,6 +128,11 @@
     <h2>MFA Changes Everything</h2>
     
     <p>Multi-factor authentication (MFA) is more important than password complexity. Even a weak password becomes dramatically harder to exploit when combined with a second factor.</p>
+    
+    <div class="quote-box">
+      <p>"MFA can block over 99.9 percent of account compromise attacks."</p>
+      <span class="source">— Microsoft Security Research, <a href="https://www.microsoft.com/en-us/security/blog/2019/08/20/one-simple-action-you-can-take-to-prevent-99-9-percent-of-account-attacks/" target="_blank">2019 Study</a></span>
+    </div>
     
     <h3>MFA Tiers</h3>
     <ul>
@@ -131,6 +172,11 @@
     
     <p>If you're setting password policies for your organization:</p>
     
+    <div class="quote-box">
+      <p>"Do not impose other composition rules (e.g., requiring mixtures of different character types or prohibiting consecutively repeated characters) on memorized secrets."</p>
+      <span class="source">— NIST SP 800-63B, Password Guidelines</span>
+    </div>
+    
     <ul>
       <li><strong>Minimum length:</strong> 14 characters (NIST recommends at least 8, but longer is better)</li>
       <li><strong>No complexity requirements:</strong> Drop the uppercase/lowercase/number/symbol rules</li>
@@ -145,6 +191,11 @@
     <h2>Passkeys: The Future</h2>
     
     <p>Passkeys (FIDO2/WebAuthn) are replacing passwords entirely for supported services. Instead of a password, your device holds a cryptographic key. You authenticate with biometrics or a PIN, and the device handles the rest.</p>
+    
+    <div class="quote-box">
+      <p>"Passkeys are a replacement for passwords. They are faster to sign in with, easier to use, and much more secure."</p>
+      <span class="source">— FIDO Alliance, <a href="https://fidoalliance.org/passkeys/" target="_blank">Passkeys Overview</a></span>
+    </div>
     
     <p>Benefits:</p>
     <ul>
