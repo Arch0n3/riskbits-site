@@ -30,6 +30,10 @@
   </div>
 </div>
 
+<figure class="hero-image" style="margin: 0; max-height: 400px; overflow: hidden;">
+  <img src="/static/images/blog/vpn-remote-hero.jpg" alt="Remote worker using laptop securely" style="width: 100%; object-fit: cover; object-position: center;">
+</figure>
+
 <article class="article-content">
   <div class="container">
     
@@ -57,8 +61,13 @@
     <p>A VPN (Virtual Private Network) creates an encrypted tunnel between your device and a VPN server. That's it. Let's break down what this means in practice.</p>
     
     <figure>
-      <img src="/static/images/blog/vpn-diagram.svg" alt="Diagram showing how VPN traffic flows through an encrypted tunnel">
-      <figcaption>VPN creates an encrypted tunnel between your device and the VPN server — traffic beyond that point is not protected by the VPN</figcaption>
+      <img src="/static/images/blog/vpn-overview.svg" alt="VPN network topology overview diagram">
+      <figcaption>VPN network overview — your traffic is encrypted to the VPN server, then exits to the internet. <em>Source: <a href="https://commons.wikimedia.org/wiki/File:VPN_overview-en.svg" target="_blank">Wikimedia Commons</a>, CC BY-SA</em></figcaption>
+    </figure>
+    
+    <figure>
+      <img src="/static/images/blog/vpn-diagram.svg" alt="Simplified diagram showing how VPN traffic flows through an encrypted tunnel">
+      <figcaption>Simplified view: VPN protects the tunnel to the server — traffic beyond that point is regular internet traffic</figcaption>
     </figure>
     
     <h3>They Encrypt Your Traffic in Transit</h3>
