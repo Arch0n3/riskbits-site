@@ -40,7 +40,18 @@
 <header>
   <div class="container-wide">
     <a href="/" class="logo">🔒 Risk<span>Bits</span></a>
-    <nav>
+    <nav class="desktop-nav">
+      <a href="/blog/">Articles</a>
+      <a href="/templates/">Templates</a>
+      <a href="/resources/">Resources</a>
+      <a href="/about/">About</a>
+    </nav>
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="mobile-nav" id="mobileNav">
       <a href="/blog/">Articles</a>
       <a href="/templates/">Templates</a>
       <a href="/resources/">Resources</a>
@@ -48,6 +59,16 @@
     </nav>
   </div>
 </header>
+<script>
+function toggleMenu() {
+  document.getElementById("mobileNav").classList.toggle("show");
+}
+document.addEventListener("click", function(e) {
+  if (!e.target.closest(".menu-toggle") && !e.target.closest(".mobile-nav")) {
+    document.getElementById("mobileNav").classList.remove("show");
+  }
+});
+</script>
 
 <div class="article-header">
   <div class="container">
