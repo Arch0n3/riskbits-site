@@ -281,8 +281,37 @@ document.addEventListener("click", function(e) {
     
     <p>The VPN is your tunnel, not your shield. Use it properly, but don't rely on it alone.</p>
 
+
+    <!-- Engagement Section -->
+    <div class="engagement-section">
+      <div class="like-section">
+        <button id="like-btn">
+          <span class="heart">🤍</span>
+          <span id="like-count">0</span> likes
+        </button>
+      </div>
+      
+      <div class="comments-section">
+        <h3>💬 Comments <span>(<span id="comments-count">0</span>)</span></h3>
+        
+        <form id="comment-form">
+          <div id="comment-error"></div>
+          <input type="text" id="comment-name" placeholder="Your name" maxlength="50" required>
+          <textarea id="comment-text" placeholder="Write a comment..." maxlength="1000" required></textarea>
+          <button type="submit">Post Comment</button>
+        </form>
+        
+        <div id="comments-list">
+          <p class="no-comments">Loading comments...</p>
+        </div>
+      </div>
+    </div>
+
   </div>
 </article>
+
+<script>window.POST_SLUG = "vpn-security-remote-work";</script>
+<script src="/static/js/comments.js"></script>
 
 <footer>
   <div class="container">
