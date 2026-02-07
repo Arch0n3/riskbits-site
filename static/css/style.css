@@ -88,27 +88,22 @@ nav.desktop-nav a:hover { color: var(--primary); text-decoration: none; }
   transition: all 0.3s;
 }
 
-/* Mobile dropdown */
+/* Mobile dropdown - hidden on desktop */
 .mobile-nav {
-  display: none;
-  position: absolute;
-  top: 100%;
-  right: 20px;
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-  min-width: 180px;
-  padding: 8px 0;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
-  transition: all 0.2s ease;
+  display: none !important;
 }
-.mobile-nav.show {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+.mobile-nav a {
+  display: block;
+  padding: 12px 20px;
+  color: var(--text);
+  font-weight: 500;
+  font-size: 15px;
+  transition: background 0.2s;
+}
+.mobile-nav a:hover {
+  background: var(--bg-alt);
+  color: var(--primary);
+  text-decoration: none;
 }
 .mobile-nav a {
   display: block;
@@ -405,7 +400,41 @@ footer a { color: var(--text-light); }
   /* Show hamburger, hide desktop nav */
   .menu-toggle { display: flex; }
   nav.desktop-nav { display: none; }
-  .mobile-nav { display: block; }
+  
+  /* Mobile nav - visible only when .show is added */
+  .mobile-nav {
+    display: block !important;
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    min-width: 180px;
+    padding: 8px 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.2s ease;
+  }
+  .mobile-nav.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  .mobile-nav a {
+    display: block;
+    padding: 12px 20px;
+    color: var(--text);
+    font-weight: 500;
+    font-size: 15px;
+  }
+  .mobile-nav a:hover {
+    background: var(--bg-alt);
+    color: var(--primary);
+    text-decoration: none;
+  }
   
   .hero { padding: 40px 0; }
   .hero h1 { font-size: 28px; padding: 0 10px; }
